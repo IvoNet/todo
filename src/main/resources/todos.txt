@@ -1,5 +1,5 @@
-* Wie ben ik?
+- Wie ben ik?
 - Introductie
-- REST
-- AngularJS
-- Demo
+- Java REST demo
+- met curl laten zien dat het werkt
+- AngularJS voor de voorkant
