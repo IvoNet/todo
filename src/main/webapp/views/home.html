@@ -13,16 +13,6 @@
 <h2>Aantal todos: {{totaalTodos()}}</h2>
 
 
-<div class="jumbotron">
-    <ul class="list-unstyled">
-        <li data-ng-repeat="todo in data">
-            <label>
-                <input type="checkbox" data-ng-model="todo.done">
-            </label>
-            <span data-ng-class="{'todo-done' : todo.done}">{{todo.todo}}</span>
-        </li>
-    </ul>
-</div>
 
 
 <pre data-ng-model="debug" data-ng-show="debug">{{ data | json }}</pre>

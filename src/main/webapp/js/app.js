@@ -38,7 +38,7 @@ app.controller('HomeController', [
    '$filter',
    'restService',
    function ($scope, $filter, restService) {
-      $scope.debug = false;
+      $scope.debug = true;
       $scope.title = "Be calm... Todo";
 
       restService.query().success(function (data) {
