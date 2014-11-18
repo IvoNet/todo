@@ -60,10 +60,6 @@ app.controller('HomeController', [
          $scope.newTodo = "";
       };
 
-      $scope.removeCompleted = function () {
-         $scope.data = $filter('filter')($scope.data, {done: false});
-      };
-
 
       $scope.$watch('data', function () {
          restService.post('resources/todos', $scope.data)
