@@ -52,13 +52,7 @@ app.controller('HomeController', [
          return 0;
       };
 
-      $scope.addTodo = function () {
-         $scope.data.push({
-                             "done": false,
-                             "todo": $scope.newTodo
-                          });
-         $scope.newTodo = "";
-      };
+
 
 
       $scope.$watch('data', function () {
