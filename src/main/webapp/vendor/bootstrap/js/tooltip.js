@@ -243,7 +243,7 @@
       $.offset.setOffset($tip[0], $.extend({
                                               using: function (props) {
                                                  $tip.css({
-                                                             top: Math.round(props.top),
+                                                             top : Math.round(props.top),
                                                              left: Math.round(props.left)
                                                           })
                                               }
