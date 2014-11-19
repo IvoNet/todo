@@ -1,0 +1,23 @@
+
+curl -H "Accept: application/json" http://localhost:8080/todo/resources/todos
+curl -H "Accept: application/xml" http://localhost:8080/todo/resources/todos
+
+curl -H "Content-Type: application/json" -X POST -d '[{"done":true,"todo":"Wie ben ik?"},{"done":false,"todo":"Wat ga ik doen?"},{"done":false,"todo":"REST"},{"done":false,"todo":"AngularJS"},{"done":false,"todo":"Demo"}}]'  http://localhost:8080/todo/resources/todos
+
+
+
+- Wie ben ik?
+- Introductie
+- REST Demo
+- Xml / Json commandline
+- AngularJS voor de front-end
+
+
+
+* debug tag
+* totaalTodos
+* list of todos -> todo.todo
+* bind todo.done
+* style done
+* Add todos
+* remove done
