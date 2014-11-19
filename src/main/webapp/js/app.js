@@ -22,7 +22,8 @@ app.factory('restService', function ($http) {
 
 app.controller('HomeController',
                function ($scope, $filter, restService) {
-                  $scope.debug = true;
+                  $scope.debug = false;
+                  $scope.showKnowledgeBase = true;
                   $scope.title = "Be calm... Todo it";
 
                   //todo Rest Call

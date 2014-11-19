@@ -11,29 +11,36 @@
 <div data-ng-controller="HomeController">
     <h1>{{title}}</h1>
 
-    <h3>Aantal todos: </h3>
+    <ul data-ng-show="showKnowledgeBase">
+        <li><a href="rest.html">REST</a></li>
+        <li><a href="angular.html">AngularJs</a></li>
+    </ul>
+
+    <div data-ng-show="!showKnowledgeBase">
+        <h3>Aantal todos: </h3>
 
 
-    <div class="jumbotron">
-        <ul class="list-unstyled">
-            <li>
-                <label>
-                    <input type="checkbox">
-                </label>
-                <span>A Todo</span>
-            </li>
-        </ul>
+        <div class="jumbotron">
+            <ul class="list-unstyled">
+                <li>
+                    <label>
+                        <input type="checkbox">
+                    </label>
+                    <span>A Todo</span>
+                </li>
+            </ul>
+        </div>
+
+        <form>
+            <label>New Todo:
+                <input type="text">
+            </label>
+            <button type="submit">Add</button>
+        </form>
+        <button type="submit">Remove Completed</button>
+
+        <pre data-ng-model="debug" data-ng-show="debug">{{ data | json }}</pre>
     </div>
-
-    <form>
-        <label>New Todo:
-            <input type="text">
-        </label>
-        <button type="submit">Add</button>
-    </form>
-    <button type="submit">Remove Completed</button>
-
-    <pre data-ng-model="debug" data-ng-show="debug">{{ data | json }}</pre>
 </div>
 
 <script type="text/javascript" src="vendor/angular/angular.js"></script>
