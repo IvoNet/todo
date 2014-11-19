@@ -4,34 +4,22 @@ import nl.ordina.domain.Todo;
 import nl.ordina.io.TodoIO;
 
 import javax.inject.Inject;
-import javax.ws.rs.Consumes;
-import javax.ws.rs.GET;
-import javax.ws.rs.POST;
-import javax.ws.rs.Path;
-import javax.ws.rs.Produces;
 import java.util.List;
 
-import static javax.ws.rs.core.MediaType.APPLICATION_JSON;
-import static javax.ws.rs.core.MediaType.APPLICATION_XML;
-
 /**
- * @author Ivo Woltring
+ * This demos the basics of how little code you need to get up and running.
  */
-@Path("/todos")
+
 public class TodoService {
 
-    @Inject TodoIO readerWriter;
+    @Inject private TodoIO todoIO;
 
-    @GET
-    @Produces({APPLICATION_JSON, APPLICATION_XML})
-    public List<Todo> getTodos() {
-        return this.readerWriter.read();
+    public List<Todo> read() {
+        return todoIO.read();
     }
 
-    @POST
-    @Consumes(APPLICATION_JSON)
-    public List<Todo> writeTodos(final List<Todo> todos) {
-        this.readerWriter.write(todos);
-        return todos;
+    public void save(List<Todo> todos) {
+        todoIO.write(todos);
     }
+
 }

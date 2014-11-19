@@ -1,14 +1,5 @@
 package nl.ordina.domain;
 
-import javax.xml.bind.annotation.XmlAccessType;
-import javax.xml.bind.annotation.XmlAccessorType;
-import javax.xml.bind.annotation.XmlRootElement;
-
-/**
- * @author Ivo Woltring
- */
-@XmlRootElement
-@XmlAccessorType(XmlAccessType.FIELD)
 public class Todo {
     private boolean done;
     private String todo;

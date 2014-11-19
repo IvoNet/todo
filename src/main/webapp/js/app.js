@@ -1,18 +1,5 @@
-var app = angular.module('TodoApp', [
-   'ngRoute'
-]);
+var app = angular.module('TodoApp', []);
 
-app.config([
-              '$routeProvider',
-              function ($routeProvider) {
-                 $routeProvider.
-                       when('/', {
-                               templateUrl: 'views/home.html',
-                               controller : 'HomeController'
-                            }).
-                       otherwise({redirectTo: '/'});
-              }
-           ]);
 
 app.factory('restService', function ($http) {
    return {
@@ -33,41 +20,25 @@ app.factory('restService', function ($http) {
    };
 });
 
-app.controller('HomeController', [
-   '$scope',
-   '$filter',
-   'restService',
-   function ($scope, $filter, restService) {
-      $scope.debug = false;
-      $scope.title = "Be calm... Todo";
+app.controller('HomeController',
+               function ($scope, $filter, restService) {
+                  $scope.debug = true;
+                  $scope.title = "Be calm... Todo it";
 
-      restService.query().success(function (data) {
-         $scope.data = data;
-      });
-
-      $scope.totaalTodos = function () {
-         if ($scope.data !== undefined) {
-            return $scope.data.length;
-         }
-         return 0;
-      };
-
-      $scope.addTodo = function () {
-         $scope.data.push({
-                             "done": false,
-                             "todo": $scope.newTodo
-                          });
-         $scope.newTodo = "";
-      };
-
-      $scope.removeCompleted = function () {
-         $scope.data = $filter('filter')($scope.data, {done: false});
-      };
+                  //todo Rest Call
 
 
-      $scope.$watch('data', function () {
-         restService.post('resources/todos', $scope.data)
-      }, true);
+                  //todo Watch Data Post
 
-   }
-]);
+
+                  //todo Total Todos
+
+
+                  //todo Add Todos
+
+
+                  //todo Remove Completed
+
+
+               }
+);
