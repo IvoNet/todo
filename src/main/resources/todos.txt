@@ -1,5 +1,5 @@
 * Wie ben ik?
 - Introductie
-- Java REST demo
-- met curl laten zien dat het werkt
-- AngularJS voor de voorkant
+- Stukje rest programmeren
+- Xml / Json Producers
+- AngularJS om de boel aan elkaar te knopen
