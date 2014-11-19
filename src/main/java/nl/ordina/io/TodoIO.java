@@ -36,6 +36,9 @@ public class TodoIO {
     }
 
     public void write(final List<Todo> todos) {
+        if (todos == null) {
+            return;
+        }
 
         final String result = todos.stream()
                                    .map(todo -> (todo.isDone() ? "* " : "- ") + todo.getTodo() + "\n")
