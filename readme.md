@@ -1,6 +1,8 @@
 # Todo App
 
-A Todo app
+A Todo app for demo purposes.
+
+Demoing some basic java REST and AngularJs functionality
 
 # Prerequisites
 
