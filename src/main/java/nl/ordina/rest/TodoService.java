@@ -9,7 +9,6 @@ import java.util.List;
 /**
  * This demos the basics of how little code you need to get up and running.
  */
-
 public class TodoService {
 
     @Inject private TodoIO todoIO;
