@@ -15,19 +15,17 @@
 
 <div>
     <h1>{{title}}</h1>
+
     <h3>Aantal todos: </h3>
 
     <div class="jumbotron">
         <ul class="list-unstyled">
             <li>
-                <label>
-                    <input type="checkbox">
-                </label>
+                <label><input type="checkbox"></label>
                 <span>A Todo</span>
             </li>
         </ul>
     </div>
-
     <form>
         <label>New Todo:
             <input type="text">
@@ -36,7 +34,7 @@
     </form>
     <button class="btn btn-xs" type="submit">Remove Completed</button>
 
-    <p data-ng-model="debug" data-ng-show="debug"><pre >Debug data: {{ data | json }}</pre></p>
+    <pre data-ng-model="debug" data-ng-show="debug">Debug data: {{ data | json }}</pre>
 </div>
 
 <script type="text/javascript" src="vendor/angular/angular.js"></script>
