@@ -2,4 +2,4 @@
 - Introductie
 - Java backend REST demo
 - met curl laten zien dat het werkt
-- AngularJS voor de voorkant
+- AngularJS
