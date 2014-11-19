@@ -15,6 +15,7 @@
 
 <div>
     <h1>{{title}}</h1>
+
     <h3>Aantal todos: </h3>
 
     <div class="jumbotron">
@@ -34,9 +35,11 @@
         </label>
         <button type="submit">Add</button>
     </form>
-    <button type="submit">Remove Completed</button>
+    <button class="btn btn-xs" type="submit">Remove Completed</button>
 
-    <pre data-ng-model="debug" data-ng-show="debug">{{ data | json }}</pre>
+
+    
+    <p data-ng-model="debug" data-ng-show="debug"><pre >Debug data: {{ data | json }}</pre></p>
 </div>
 
 <script type="text/javascript" src="vendor/angular/angular.js"></script>
@@ -45,7 +48,7 @@
 <script type="text/javascript" src="vendor/angular-bootstrap/ui-bootstrap.js"></script>
 <script type="text/javascript" src="vendor/angular-route/angular-route.js"></script>
 <script type="text/javascript">
-
+    //Our code here
 </script>
 </body>
 </html>
