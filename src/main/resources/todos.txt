@@ -1,5 +1,5 @@
-* Wie ben ik?
+- Wie ben ik?
 - Introductie
-- Stukje rest programmeren
-- Xml / Json Producers
-- AngularJS om de boel aan elkaar te knopen
+- REST Demo
+- Xml / Json commandline
+- AngularJS voor de front-end
